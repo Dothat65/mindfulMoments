@@ -7,7 +7,7 @@ function App() {
         <h1>Welcome to My React App</h1>
       </header>
       <main>
-        <p>This is a simple React application.</p>
+        <p>This is a simple Reactasdfasdf application.</p>
       </main>
     </div>
   );
