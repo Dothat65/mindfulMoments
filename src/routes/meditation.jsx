@@ -1,10 +1,11 @@
 import React from 'react';
 
 function Meditation() { 
-return 
+return (
 <div>
 <h1>Meditation</h1>
 </div>
+);
 
 }
 
