@@ -3,7 +3,7 @@ import React from 'react';
 function Meditation() { 
 return 
 <div>
-<h1>Meditation</h1>
+<h1>Meditation 1</h1>
 </div>
 
 }
