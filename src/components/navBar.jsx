@@ -26,6 +26,7 @@ function NavBar() {
             <NavItem path="/moodTracker" text="Mood Tracker" />
             <NavItem path="/registration" text="Registration" />
             <NavItem path="/resources" text="Resources" />
+            <NavItem path="/about" text="About" />
         </div>
     )
 }
