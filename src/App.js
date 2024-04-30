@@ -7,6 +7,7 @@ import Resources from './routes/resources';
 import Home from './routes/home';
 import MoodTracker from './routes/moodTracker';
 import NavBar from './components/navBar';
+import About from './routes/about';
 
 function App() {
   return (
@@ -14,7 +15,6 @@ function App() {
       <NavBar /> {}
       <div className="App">
         <header className="App-header">
-          <h1>Welcome to My React App</h1>
         </header>
         <main>
           <Routes>
@@ -24,6 +24,8 @@ function App() {
             <Route path="/registration" element={<Registration />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/moodTracker" element={<MoodTracker />} />
+            <Route path="/about" element={<About />} />
+
           </Routes>
         </main>
       </div>
