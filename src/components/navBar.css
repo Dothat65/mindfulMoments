@@ -4,6 +4,16 @@
     align-items: center;
     padding: 1rem 2rem;
     background-color: #f8f9fa;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 90px;
 
+}
+
+.navItem a {
+    text-decoration: none; /* Removes underline */
+    color: black; /* Set text color */
+}
+
+.navItem a:hover {
+    color: #007bff; /* Set text color on hover */
 }
