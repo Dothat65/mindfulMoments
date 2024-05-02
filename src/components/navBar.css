@@ -1,9 +1,9 @@
 .nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #f8f9fa;
+    background-color: #CEDFDF;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 90px;
 
@@ -15,5 +15,10 @@
 }
 
 .navItem a:hover {
-    color: #007bff; /* Set text color on hover */
+    border: 1px solid #91AC9A;
+    background-color: #A9C3B6;
+    padding: 10px;
+    border-radius: 10px;
+    color: white; /* Set text color on hover */
+    transition: 1s ease;
 }
