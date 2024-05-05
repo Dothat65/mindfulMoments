@@ -61,10 +61,12 @@ function Journal() {
                     </div>
                     <div id="taskList">
                         {tasks.map((task, index) => (
-                            <div key={index} className="task">
-                                <input type="checkbox" />
-                                <div className="journal-text">{task.text}</div>
-                                <div className="date">{task.date}</div>
+                            <div key={index} className="journal-container">
+                                <div className="task">
+                                    <input type="checkbox" />
+                                    <div className="journal-text">{task.text}</div>
+                                    <div className="date">{task.date}</div>
+                                </div>
                             </div>
                         ))}
                     </div>
