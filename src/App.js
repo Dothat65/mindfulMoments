@@ -8,11 +8,13 @@ import Home from './routes/home';
 import MoodTracker from './routes/moodTracker';
 import NavBar from './components/navBar';
 import About from './routes/about';
+import HamburgerMenu from './components/hamburgerMenu';
 
 function App() {
   return (
     <Router>
       <NavBar /> {}
+      <HamburgerMenu /> {}
       <div className="App">
         <header className="App-header">
         </header>
