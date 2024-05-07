@@ -1,0 +1,100 @@
+header {
+    background-color: #569E79;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.container {
+    margin: 20px;
+    border: 1px solid black;
+    padding: 50px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#taskInput {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+#taskInput::placeholder {
+    color: #999;
+}
+
+#addTaskButton,
+#clearTasksButton {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 125px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+#taskList {
+    margin-top: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.copyRight {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.copyRight a {
+    text-decoration: underline;
+}
+
+
+.journal-container {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.journal-container .task {
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-text {
+    margin-bottom: 5px; 
+}
+
+.date {
+    position: relative;
+    margin-top: 5px; 
+}

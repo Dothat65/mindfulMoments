@@ -1,0 +1,7 @@
+.main-header{
+    border: 1px solid red;
+    height: 600px;
+}
+.main-header h1{
+    text-align: center;
+}
