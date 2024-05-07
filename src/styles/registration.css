@@ -1,16 +1,57 @@
-
-.registration-form{
-    border: 1px solid red;
-    height: 800px;
-    padding: 20px;
-   
-
+body{
+    background-color: #3e9794;
+}
+.registration-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.login-section img{
-    border: 1px solid red;
-    padding: 30px;
-    width: 200px;
-    height: 200px;
-    
+.login-section {
+    background-color: #A7D7C5;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.login-section img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.login-section form input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-section form button {
+    width: 100%;
+    background-color: #6ccbc8;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-section form button:hover {
+    background-color: #5F99A5;
+    transition: 1s ease;
+}
+
+.login-section p {
+    margin-top: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+.login-section p:hover {
+    text-decoration: underline;
 }
