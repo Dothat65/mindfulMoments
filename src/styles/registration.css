@@ -55,3 +55,31 @@ body{
 .login-section p:hover {
     text-decoration: underline;
 }
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    
+}
+
+.password-input {
+    position: relative;
+    width: 100%;
+}
+
+.password-input input {
+    padding-right: 50px; /* reserve space for the show/hide toggle */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.password-input span {
+    position: absolute;
+    right: 10px;
+    top: 30%; /* Adjust this to move the text up or down */
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: #fff;
+    padding: 0 5px;
+}
