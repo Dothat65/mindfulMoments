@@ -4,7 +4,6 @@ import { Avatar, AvatarImage, AvatarFallback } from '@radix-ui/react-avatar';
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuSeparator } from '@radix-ui/react-dropdown-menu';
 import './home.css';
 
-
 export default function Home() {
   return (
     <>
@@ -34,16 +33,16 @@ export default function Home() {
             Let's continue your mental health journey. Explore the tools and resources available to you.
           </p>
           <div className="grid grid-cols-2 gap-4 mb-8">
-            <Link to="#" className="dashboard-box">
+            <Link to="/moodTracker" className="dashboard-box">
               Mood Tracker
             </Link>
-            <Link to="#" className="dashboard-box">
+            <Link to="/journal" className="dashboard-box">
               Journal
             </Link>
-            <Link to="#" className="dashboard-box">
+            <Link to="/meditation" className="dashboard-box">
               Meditation
             </Link>
-            <Link to="#" className="dashboard-box">
+            <Link to="/resources" className="dashboard-box">
               Resources
             </Link>
           </div>
