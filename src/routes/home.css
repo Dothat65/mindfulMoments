@@ -1,0 +1,63 @@
+body {
+  background-color: #e5e5e5; /* Light grey background */
+}
+
+header {
+  background-color: #91AC9A;
+}
+
+.dashboard-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: #B7D1D3;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.dashboard-box:hover {
+  background-color: #A9C3B6; /* Slightly darker on hover */
+}
+
+.recent-activity {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activity h2 {
+  color: #91AC9A;
+}
+
+.recent-activity ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recent-activity li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.recent-activity li:last-child {
+  border-bottom: none;
+}
+
+/* Dark Mode Styles */
+.dark .recent-activity {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark .dashboard-box {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.dark .dashboard-box:hover {
+  background-color: #424242;
+}
