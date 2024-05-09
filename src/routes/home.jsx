@@ -27,7 +27,7 @@ export default function Home() {
       <main className="flex-1 w-full py-12 md:py-24 lg:py-32 bg-[url('/nature-pattern.svg')] bg-repeat bg-[length:200px_200px] bg-[#B7D1D3] dark:bg-[#A6C3CE]">
         <div className="container px-4 md:px-6">
           <h1 className="text-3xl font-bold text-[#91AC9A] mb-4">
-            Welcome back, Moe!
+            Welcome!
           </h1>
           <p className="text-xl text-[#A9C3B6] mb-8">
             Let's continue your mental health journey. Explore the tools and resources available to you.
@@ -49,7 +49,7 @@ export default function Home() {
           <div className="recent-activity">
             <h2 className="text-xl font-semibold text-[#91AC9A]">Recent Activity</h2>
             <ul>
-              <li>Mood Tracker Updated - 2 hours ago</li>
+            <li>Mood Tracker Updated - 2 hours ago</li>
               <li>New Journal Entry - 1 day ago</li>
             </ul>
           </div>

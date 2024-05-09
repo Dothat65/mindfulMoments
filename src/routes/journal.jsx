@@ -1,80 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import '../styles/journal.css'; // Importing CSS file
+import React, { useState } from 'react';
+import axios from 'axios';
+import '../styles/journal.css';
 
-function Journal() {
+const Journal = () => {
     const [tasks, setTasks] = useState([]);
     const [taskInput, setTaskInput] = useState('');
 
-    useEffect(() => {
-        const todayDate = new Date();
-        const day = todayDate.getDate();
-        const month = todayDate.getMonth() + 1;
-        const year = todayDate.getFullYear();
-
-        const dateString = `${month}/${day}/${year}`;
-        document.getElementById("date").textContent = dateString;
-    }, []);
-
-    const handleTaskInputChange = (event) => {
-        setTaskInput(event.target.value);
-    };
-
     const handleAddTask = () => {
+        console.log('handleAddTask called', taskInput);
         if (taskInput.trim() !== '') {
-            const todayDate = new Date();
-            const day = todayDate.getDate();
-            const month = todayDate.getMonth() + 1;
-            const year = todayDate.getFullYear();
-            const dateString = `${month}/${day}/${year}`;
-            
             const newTask = {
-                text: taskInput,
-                date: dateString
+                content: taskInput,
             };
-            setTasks([...tasks, newTask]);
-            setTaskInput('');
+
+            const token = localStorage.getItem('token');
+
+            axios.post('http://localhost:8080/journal', newTask, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+            .then(response => {
+                console.log('Journal entry created:', response.data);
+                // Update the tasks state to include the new journal entry
+                setTasks([...tasks, response.data]);
+                setTaskInput('');
+            })
+            .catch(error => {
+                console.error('axios.post error', error);
+            });
         }
     };
 
-    const handleClearTasks = () => {
-        setTasks([]);
+    const handleDeleteTask = (indexToDelete) => {
+        setTasks(tasks.filter((task, index) => index !== indexToDelete));
     };
 
     return (
-        <div>
-            <header>
-                <h1>Daily Journals </h1>
-                <div id="date"></div>
-            </header>
-
-            <main>
-                <div className="container">
-                    <div className="input-container">
-                        <textarea
-                            id="taskInput"
-                            placeholder="Enter Journal Here...."
-                            value={taskInput}
-                            onChange={handleTaskInputChange}
-                            required
-                        ></textarea>
-                        <button onClick={handleAddTask}>Add Journal</button>
+        <div className="container">
+              <h1>Daily Journals</h1>
+            <div className="input-container">
+            <textarea id="taskInput" onChange={(e) => setTaskInput(e.target.value)} value={taskInput} placeholder="Write away..."></textarea>
+                <button id="addTaskButton" onClick={handleAddTask}>Add Journal</button>
+            </div>
+            <div id="taskList">
+                {tasks.map((task, index) => (
+                    <div key={index} className="journal-container">
+                        <div className="task">
+                            <input type="checkbox" />
+                            <div className="journal-text">{task.content}</div>
+                            <div className="date">{task.date}</div>
+                            <button className = "deleteButton" onClick={() => handleDeleteTask(index)}>Delete</button>
+                        </div>
                     </div>
-                    <div id="taskList">
-                        {tasks.map((task, index) => (
-                            <div key={index} className="journal-container">
-                                <div className="task">
-                                    <input type="checkbox" />
-                                    <div className="journal-text">{task.text}</div>
-                                    <div className="date">{task.date}</div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    <button onClick={handleClearTasks}>Clear Tasks</button>
-                </div>
-            </main>
+                ))}
+            </div>
         </div>
     );
-}
+};
 
 export default Journal;
