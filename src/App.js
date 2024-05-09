@@ -14,9 +14,9 @@ import NewPassword from './routes/passwordReset';
 function App() {
   return (
     <Router>
-      <NavBar /> {}
-      <HamburgerMenu /> {}
-      <div className="App">
+      <NavBar />
+      <HamburgerMenu />
+      <div className="App" style={{ marginTop: '70px' }}>
         <header className="App-header">
         </header>
         <main>
@@ -29,7 +29,6 @@ function App() {
             <Route path="/moodTracker" element={<MoodTracker />} />
             <Route path="/about" element={<About />} />
             <Route path="/new-password" element={<NewPassword />} />
-
           </Routes>
         </main>
       </div>
