@@ -1,9 +1,7 @@
-// src/components/hamburgerMenu.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './hamburgerMenu.css';
 
-// defines a single navigation item, receives path and text as props
 function NavItem({ path, text }) {
     return (
         <div className="nav-item">
@@ -12,24 +10,48 @@ function NavItem({ path, text }) {
     );
 }
 
-// main component for the hamburger menu
 function HamburgerMenu() {
-    const [isOpen, setIsOpen] = useState(false); // state to track if the menu is open
+    const [isOpen, setIsOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
 
-    // function to toggle the menu open/close state
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
-    // renders the hamburger icon and the sliding menu container
+    useEffect(() => {
+        let lastScrollTop = 0;
+        const handleScroll = () => {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st > lastScrollTop) {
+                // downscroll code
+                setIsVisible(false);
+            } else {
+                // upscroll code
+                setIsVisible(true);
+            }
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <div>
-            <div className="hamburger" onClick={toggleMenu} style={{left: isOpen ? "270px" : "20px"}}>
-                &#9776; {/* unicode for hamburger icon */}
+            <div 
+                className="hamburger" 
+                onClick={toggleMenu} 
+                style={{ 
+                    left: isOpen ? "270px" : "20px", 
+                    opacity: isVisible ? 1 : 0 
+                }}
+            >
+                &#9776;
             </div>
             <div className="menu-container" style={{ transform: isOpen ? 'translateX(0)' : 'translateX(-100%)' }}>
                 <div className="nav-items">
-                    {/* list of navigation items, each linked to a route */}
                     <NavItem path="/" text="Home" />
                     <NavItem path="/meditation" text="Meditation" />
                     <NavItem path="/journal" text="Journal" />

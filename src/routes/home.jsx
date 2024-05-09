@@ -7,13 +7,13 @@ import './home.css';
 export default function Home() {
   return (
     <>
-      <header className="w-full bg-[#91AC9A] px-4 md:px-6 py-4 flex items-center justify-between">
+      <header className="w-full px-4 md:px-6 py-4 flex items-center justify-between">
         <Link className="flex items-center gap-2 text-white" to="#">
         </Link>
         <div className="flex items-center gap-4 sm:gap-6">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Avatar className="h-9 w-9 bg-[#A9C3B6] text-white">
+              <Avatar className="h-10 w-10 rounded-full overflow-hidden bg-white text-black">
                 <AvatarImage alt="User Avatar" src="/placeholder-avatar.jpg" />
                 <AvatarFallback>MB</AvatarFallback>
               </Avatar>
@@ -49,7 +49,7 @@ export default function Home() {
           <div className="recent-activity">
             <h2 className="text-xl font-semibold text-[#91AC9A]">Recent Activity</h2>
             <ul>
-            <li>Mood Tracker Updated - 2 hours ago</li>
+              <li>Mood Tracker Updated - 2 hours ago</li>
               <li>New Journal Entry - 1 day ago</li>
             </ul>
           </div>
@@ -58,3 +58,4 @@ export default function Home() {
     </>
   );
 }
+
