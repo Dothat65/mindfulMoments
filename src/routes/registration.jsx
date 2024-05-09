@@ -27,12 +27,12 @@ function Registration() {
     // Function to handle form submission
     const handleSubmit = async (event) => {
         event.preventDefault();
-
+    
         if (isSignUp && password !== reEnterPassword) {
             setErrorMessage("Passwords do not match!");
             return;
         }
-
+    
         const url = isSignUp ? 'http://localhost:8080/users' : 'http://localhost:8080/users/login';
         const body = isSignUp ? {
             email: email,
@@ -44,7 +44,7 @@ function Registration() {
             username: username,
             password: password,
         };
-
+    
         fetch(url, {
             method: 'POST',
             headers: {
@@ -61,7 +61,13 @@ function Registration() {
         })
         .then(data => {
             console.log(data);
-            localStorage.setItem('user', JSON.stringify(data));
+            if (!isSignUp) {
+                // If the user is logging in, store the token in the local storage
+                localStorage.setItem('token', data.token);
+            } else {
+                // If the user is signing up, store the user data in the local storage
+                localStorage.setItem('user', JSON.stringify(data));
+            }
             navigate('/');  // navigate to home page
         })
         .catch((error) => {
