@@ -44,11 +44,11 @@ function NewPassword() {
             <input type="text" className="reset-input" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
             <div className="input-wrapper">
                 <input type={showPassword ? "text" : "password"} className="reset-input" placeholder="New Password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
-                <button type="button" className="show-password-button" onClick={() => setShowPassword(!showPassword)}>{showPassword ? 'Hide' : 'Show'}</button>
+                <span onClick={() => setShowPassword(!showPassword)}>{showPassword ? 'Hide' : 'Show'}</span>
             </div>
             <div className="input-wrapper">
                 <input type={showPassword ? "text" : "password"} className="reset-input" placeholder="Confirm New Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-                <button type="button" className="show-password-button" onClick={() => setShowPassword(!showPassword)}>{showPassword ? 'Hide' : 'Show'}</button>
+                <span onClick={() => setShowPassword(!showPassword)}>{showPassword ? 'Hide' : 'Show'}</span>
             </div>
             <button type="submit" className="reset-button">Reset Password</button>
         </form>

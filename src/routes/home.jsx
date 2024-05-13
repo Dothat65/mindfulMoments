@@ -15,7 +15,7 @@ export default function Home() {
             <DropdownMenuTrigger asChild>
               <Avatar className="h-10 w-10 rounded-full overflow-hidden bg-white text-black">
                 <AvatarImage alt="User Avatar" src="/placeholder-avatar.jpg" />
-                <AvatarFallback>MB</AvatarFallback>
+                
               </Avatar>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
