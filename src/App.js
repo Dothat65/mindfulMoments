@@ -10,11 +10,13 @@ import NavBar from './components/navBar';
 import About from './routes/about';
 import HamburgerMenu from './components/hamburgerMenu';
 import NewPassword from './routes/passwordReset';
+import ProfileIcon from './components/profileIcon';
 
 function App() {
   return (
     <Router>
       <NavBar />
+      <ProfileIcon />
       <HamburgerMenu />
       <div className="App" style={{ marginTop: '70px' }}>
         <header className="App-header">
