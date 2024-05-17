@@ -1,0 +1,57 @@
+/* src/components/hamburgerMenu.css */
+
+/* initial menu position */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    background-color: #f8f9fa;
+    z-index: 1000;
+  }
+  
+  .hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    cursor: pointer;
+    font-size: 30px;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  /* sets the layout for navigation items inside the menu */
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+  }
+  
+  /* defines the style for each navigation item */
+  .nav-item {
+    text-align: left;
+    padding: 10px 20px;
+  }
+  
+  /* styles links to look bold and stand out */
+  .nav-item a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .nav-item a:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .menu-active {
+    transform: translateX(0);
+  }
+  

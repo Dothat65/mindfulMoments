@@ -1,0 +1,26 @@
+.card-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Add padding to create space around cards */
+    background-color: #f0f0f0; /* Background color of your choice */
+}
+
+.card {
+    width: 250px;
+    text-align: center;
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 8px; /* Add rounded corners to the border */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px; /* Round the top-left corner of the image */
+    border-top-right-radius: 8px; /* Round the top-right corner of the image */
+}
+
+.card-text p {
+    margin-top: 10px;
+    padding: 10px; /* Add padding to the text */
+}

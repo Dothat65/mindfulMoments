@@ -1,0 +1,73 @@
+/* src/components/meditation.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.meditation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('https://img.craftpix.net/2023/04/Free-Nature-Backgrounds-Pixel-Art6.png') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.timer {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 128, 128, 0.7);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  background-color: #006666;
+}
+
+button:nth-child(1) {
+  background-color: #00b3b3;
+  color: white;
+}
+
+button:nth-child(2) {
+  background-color: #008080;
+  color: white;
+}
